@@ -1,7 +1,7 @@
 # Traitement prosodique : la totale
 
 ## 1) Transcription
-**But** : obtenir une tier grossièrement segmentée (**unités de parole** séparées par des pauses) avec une **transcription orthographique**.
+**But** : obtenir une tier grossièrement segmentée (**unités de parole séparées par des pauses**) avec une **transcription orthographique**.
 
 ### Façon simple
 → Faire à la main une transcription grossière dans une tier `ortho`.
@@ -45,9 +45,9 @@
 
 <br>
 
-*Note: MAUS permet techniquement de faire en une seule étape **la transcription** et **la segmentation**. Pour cela, il faut sélectionner* Pipeline without ASR *dans le menu de gauche (show service sidebar) et s'identifier avec son université. **Le résultat est cependant médiocre par rapport à Whisper + MAUS***
+*Note: MAUS permet de faire en une seule étape <u>la transcription</u> et <u>la segmentation</u>. Pour cela, il faut sélectionner <u>Pipeline without ASR</u> dans le menu de gauche (show service sidebar) et s'identifier avec son université. **Le résultat est cependant médiocre par rapport à Whisper + MAUS***
 
-*Note 2: on peut aussi segmenter automatiquement directement dans Praat (sélectionner l'intervalle et `Ctrl + D`). **Le résultat est cependant mauvais par rapport à MAUS.***
+*Note 2: Praat permet aussi de segmenter automatiquement à partir d'une transcription orthographique (sélectionner l'intervalle puis `Ctrl + D`). **Le résultat est cependant mauvais par rapport à MAUS.***
 
 
 ## Calculer les variables temporelles
