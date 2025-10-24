@@ -9,9 +9,9 @@
 ### Façon technique (Whisper)
 À terme, fait gagner du temps, mais demande une certaine mise en place :
 
-- Si ce n'est pas déjà fait, <u>[installer Python](https://www.python.org/downloads/)</u> ;
-- <u>Installer Whisper</u>: dans un terminal, exécuter `pip install git+https://github.com/openai/whisper.git` ;
-- Télécharger le script [whisper-textgrid.py](whisper-textgrid.py) et le mettre dans le même dossier que le son ;
+- Si ce n'est pas déjà fait, **[installer Python](https://www.python.org/downloads/)** et son IDLE ;
+- **Installer Whisper** : dans un terminal, exécuter `pip install git+https://github.com/openai/whisper.git` ;
+- Télécharger le script [whisper-textgrid.py](whisper-textgrid.py) et le mettre dans le même dossier que le fichier audio ;
 - Ouvrir le script avec *python IDLE* et l'exécuter (*Run > Run*) ;
 - Renseigner le fichier audio et la langue de transcription ;
 - Ouvrir dans Praat et contrôler la segmentation et la transcription.
@@ -25,7 +25,7 @@
 
 - Aller sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSGeneral)
 - Menu à gauche (*show service sidebar*) > *Pipeline without ASR*
-- Sélectionner *le fichier audio* et *la TextGrid* **du même nom**
+- Sélectionner **le fichier audio et la TextGrid du même nom**
 - *Upload*
 - Pipeline : `CHUNKPREP → G2P → MAUS → PHO2SYL`
 - Déplier *Expert Options*
