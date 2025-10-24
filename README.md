@@ -50,7 +50,7 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 *Note 2: Praat permet aussi de segmenter automatiquement à partir d'une transcription orthographique (sélectionner l'intervalle puis `Ctrl + D`). Le résultat est cependant médiocre par rapport à MAUS.*
 
 
-## Calculer les variables temporelles
+## 3) Calculer les variables temporelles
 
 **But** : analyse chiffrée du débit de parole (rapport phonèmes/groupes prosodiques)
 
