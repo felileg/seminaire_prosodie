@@ -45,9 +45,9 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 <br>
 
-*Note: MAUS permet de faire en une seule étape la transcription et la segmentation. Pour cela, il faut sélectionner* Pipeline **with** ASR *dans le menu de gauche* (show service sidebar) *et s'identifier avec son université. **Le résultat est cependant médiocre par rapport à Whisper + MAUS ou segmentation manuelle + MAUS.***
+*Note: MAUS permet de faire en une seule étape la transcription et la segmentation. Pour cela, il faut sélectionner* Pipeline **with** ASR *dans le menu de gauche* (show service sidebar) *et s'identifier avec son université. Le résultat est cependant médiocre par rapport à Whisper + MAUS ou segmentation manuelle + MAUS.*
 
-*Note 2: Praat permet aussi de segmenter automatiquement à partir d'une transcription orthographique (sélectionner l'intervalle puis `Ctrl + D`). **Le résultat est cependant mauvais par rapport à MAUS.***
+*Note 2: Praat permet aussi de segmenter automatiquement à partir d'une transcription orthographique (sélectionner l'intervalle puis `Ctrl + D`). Le résultat est cependant médiocre par rapport à MAUS.*
 
 
 ## Calculer les variables temporelles
@@ -58,7 +58,7 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 - Contrôler que le son et la TextGrid ont le même nom (à part l'extension)
 - Ouvrir Praat
-- *Praat* > *Open Praat script...* > sélectionner le script *variables_temporelles*
+- *Praat* > *Open Praat script...* > sélectionner le script **variables temporelles** ([MacOS/Linux](variables_temporelles_MAC_LINUX.praat), [Windows](variables_temporelles_WIN.praat))
 - *Run* > *Run* ou `Ctrl + R`
 - Remplir : 
 	- Dossier : adresse du **répertoire** dans lequel se trouve la TextGrid (pas l'adresse du fichier)
