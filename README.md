@@ -39,9 +39,9 @@
 
 **Résultat**: une TextGrid avec 4 niveaux d'analyse: groupe prosodique, mot, syllabe et phonème.
 
-*Note: MAUS permet techniquement de faire en une seule étape **la transcription** et **la segmentation**. Pour cela, il faut sélectionner* Pipeline without ASR *dans le menu de gauche (show service sidebar) et s'identifier avec son université. Le résultat est cependant médiocre par rapport à Whisper + MAUS*
+*Note: MAUS permet techniquement de faire en une seule étape **la transcription** et **la segmentation**. Pour cela, il faut sélectionner* Pipeline without ASR *dans le menu de gauche (show service sidebar) et s'identifier avec son université. **Le résultat est cependant médiocre par rapport à Whisper + MAUS***
 
-*Note 2: on peut aussi segmenter automatiquement directement dans Praat (sélectionner l'intervalle et `Ctrl + D`). Le résultat est cependant mauvais par rapport à MAUS.*
+*Note 2: on peut aussi segmenter automatiquement directement dans Praat (sélectionner l'intervalle et `Ctrl + D`). **Le résultat est cependant mauvais par rapport à MAUS.***
 
 
 ## Calculer les variables temporelles
