@@ -1,6 +1,6 @@
 # Traitement prosodique : la totale
 
-## Transcription large
+## 1) Transcription
 **But** : obtenir une tier grossièrement segmentée (**unités de parole** séparées par des pauses) avec une **transcription orthographique**.
 
 ### Façon simple
@@ -12,12 +12,15 @@
 - Installer whisper en python (dans un terminal : `pip install openai-whisper`)
 - Exécuter dans un terminal : `whisper NOM_DU_FICHIER.extension --language fr --output_format tsv`
 - Renommer le fichier de sortie en `whisper.tsv`
-- Ouvrir `tsv-to-textgrid.py` et l'exécuter (*Run* > *Run Module* ou `Fn + F5`) → un fichier `whisper.TextGrid` est créé
+- Placer le script `tsv-to-textgrid.py` dans le même dossier, l'ouvrir et l'exécuter (*Run* > *Run Module* ou `Fn + F5`) → un fichier `whisper.TextGrid` est créé
 - Ouvrir dans Praat et contrôler la segmentation et la transcription.
 
 
-## Segmentation automatique dans MAUS
+## 2) Segmentation
+
 **But** : transcrire en phonétique, découper finement en syllabes et en phonèmes.
+
+**Prérequis** : le fichier qu'on vient de créer, soit une TextGrid avec une tier `ortho` contenant une transcription orthographique des unités de parole.
 
 - Aller sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSGeneral)
 - Menu à gauche (*show service sidebar*) > *Pipeline without ASR*
@@ -38,6 +41,8 @@
 	- `TRN` (groupes prosodiques) → `ortho`.
 
 **Résultat**: une TextGrid avec 4 niveaux d'analyse: groupe prosodique, mot, syllabe et phonème.
+
+<br>
 
 *Note: MAUS permet techniquement de faire en une seule étape **la transcription** et **la segmentation**. Pour cela, il faut sélectionner* Pipeline without ASR *dans le menu de gauche (show service sidebar) et s'identifier avec son université. **Le résultat est cependant médiocre par rapport à Whisper + MAUS***
 
