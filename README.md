@@ -9,11 +9,11 @@
 ### Façon technique (Whisper)
 À terme, fait gagner du temps, mais demande une certaine mise en place :
 
-- Installer whisper en python (dans un terminal : `pip install openai-whisper`)
-- Exécuter dans un terminal : `whisper NOM_DU_FICHIER.extension --language fr --output_format tsv`
-- Renommer le fichier de sortie en `whisper.tsv`
-- Placer le script `tsv-to-textgrid.py` dans le même dossier que le .tsv, l'ouvrir et l'exécuter (*Run* > *Run Module* ou `Fn + F5`)  
-→ un fichier `whisper.TextGrid` est créé
+- Si ce n'est pas déjà fait, [installer Python](https://www.python.org/downloads/) ;
+- Installer Whisper: dans un terminal, exécuter `pip install git+https://github.com/openai/whisper.git` ;
+- Télécharger le script [whisper-textgrid.py](whisper-textgrid.py) et le mettre dans le même dossier que le son ;
+- Ouvrir le script avec *python IDLE* et l'exécuter (*Run > Run*) ;
+- Renseigner le fichier audio et la langue de transcription ;
 - Ouvrir dans Praat et contrôler la segmentation et la transcription.
 
 
