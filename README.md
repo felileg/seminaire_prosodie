@@ -1,21 +1,21 @@
 # Traitement prosodique : la totale
 
 ## 1) Transcription
-**But** : obtenir une tier grossièrement segmentée (**unités de parole séparées par des pauses**) avec une **transcription orthographique**.
+**But** : obtenir une tier grossièrement segmentée (les **unités de parole** séparées par des **pauses**) avec une **transcription orthographique**.
 
 ### Façon simple
-→ Faire à la main une transcription grossière dans une tier `ortho`.
+Faire à la main une transcription grossière dans une tier `ortho`.
 
 ### Façon technique (Whisper)
 À terme, fait gagner du temps, mais demande une certaine mise en place :
 
-- Si ce n'est pas déjà fait, **[installer Python](https://www.python.org/downloads/)** et son IDLE ;
-- **Installer Whisper** : dans un terminal, exécuter `pip install git+https://github.com/openai/whisper.git` ;
-- Télécharger le script [whisper-textgrid.py](whisper-textgrid.py) et le mettre dans le même dossier que le fichier audio ;
-- Ouvrir le script avec *python IDLE* et l'exécuter (*Run > Run*) ;
-- Renseigner le fichier audio et la langue de transcription ;
+- Si ce n'est pas déjà fait, **[installer Python](https://www.python.org/downloads/)** et son IDLE
+- **Installer Whisper** : dans un terminal, exécuter `pip install git+https://github.com/openai/whisper.git`
+- Télécharger le script **[whisper-textgrid.py](whisper-textgrid.py)** et le mettre dans le même dossier que le fichier audio
+- Ouvrir le script avec *python IDLE* et **l'exécuter** (*Run > Run Module*)
+- Renseigner le fichier audio et la langue de transcription et **patienter**  
+→ une TextGrid est créée dans le dossier!
 - Ouvrir dans Praat et contrôler la segmentation et la transcription.
-
 
 ## 2) Segmentation
 
@@ -24,7 +24,7 @@
 **Prérequis** : le fichier qu'on vient de créer, soit une TextGrid avec une tier `ortho` contenant une transcription orthographique des unités de parole.
 
 - Aller sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSGeneral)
-- Menu à gauche (*show service sidebar*) > *Pipeline without ASR*
+- Menu à gauche (*show service sidebar*) > *Pipeline **without** ASR*
 - Sélectionner **le fichier audio et la TextGrid du même nom**
 - *Upload*
 - Pipeline : `CHUNKPREP → G2P → MAUS → PHO2SYL`
