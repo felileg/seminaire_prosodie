@@ -9,8 +9,8 @@
 ### Façon technique (Whisper)
 À terme, fait gagner du temps, mais demande une certaine mise en place :
 
-- Si ce n'est pas déjà fait, [installer Python](https://www.python.org/downloads/) ;
-- Installer Whisper: dans un terminal, exécuter `pip install git+https://github.com/openai/whisper.git` ;
+- Si ce n'est pas déjà fait, <u>[installer Python](https://www.python.org/downloads/)</u> ;
+- <u>Installer Whisper</u>: dans un terminal, exécuter `pip install git+https://github.com/openai/whisper.git` ;
 - Télécharger le script [whisper-textgrid.py](whisper-textgrid.py) et le mettre dans le même dossier que le son ;
 - Ouvrir le script avec *python IDLE* et l'exécuter (*Run > Run*) ;
 - Renseigner le fichier audio et la langue de transcription ;
