@@ -24,6 +24,9 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 **Prérequis** : le fichier qu'on vient de créer, soit une TextGrid avec une tier `ortho` contenant une transcription orthographique des unités de parole.
 
+---
+<br>
+
 - Aller sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSGeneral)
 - Menu à gauche (*show service sidebar*) > *Pipeline **without** ASR*
 - Sélectionner **le fichier audio et la TextGrid du même nom**
@@ -56,6 +59,9 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 **But** : analyse chiffrée du débit de parole (rapport phonèmes/groupes prosodiques)
 
 **Prérequis** : la TextGrid créée à l'aide de MAUS, contenant une tier pour les **groupes prosodiques** (unités de paroles séparées par des pauses) et une autre pour les **syllabes**.
+
+---
+<br>
 
 - Contrôler que le son et la TextGrid ont le même nom (à part l'extension)
 - Ouvrir Praat
