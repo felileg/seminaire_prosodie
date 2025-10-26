@@ -148,10 +148,37 @@ Il y a maintenant 6 objets, dont on peut supprimer *Intensity* et *Pitch*, en ga
 
 5) **Analyse syntaxique avec Dismo**
 
-**But** : analyse syntaxique de la tier `words`, pour détecter les **groupes clitiques**. Les groupes clitiques sont une **notion syntaxique théorique, et pas directement prosodique** : ils représentent l'unité sur laquelle **peut** tomber l'acccent.
+**Ce que ça fait** : analyse syntaxique de la tier `words`, pour pouvoir plus tard détecter les **groupes clitiques**. Les groupes clitiques sont une **notion syntaxique théorique, et pas directement prosodique** : ils représentent l'unité sur laquelle **peut** tomber l'acccent.
 
-Dans DisMo: 
+Dans DisMo : 
 - *File > Add file to the corpus* : choisir la TextGrid comportant la tier `prom-analor` 
 - Cocher toutes les cases dans *Annotation options*
 - *→ Annotate!*  
-→ une nouvelle TextGrid (*_dismo.TextGrid) est créée
+→ une nouvelle TextGrid est créée, contenant les annotations syntaxiques
+
+
+6) **Mise en évidence des groupes clitiques**
+
+**Ce que ça fait** : utilise les étiquettes syntaxiques générées par DisMo pour détecter les noyaux des groupes clitiques.
+
+Dans Praat:
+- Importer la TextGrid générée par DisMo
+- Supprimer les tiers inutiles : `dismo-discourse`, `dismo-boundaries`, `dismo-tok-min`, `dismo-pos-min`, `dismo-disfluences`
+
+<br>
+
+- *Praat > Open Praat script...* > choisir `1-makeLex.praat`
+- Exécuter le script (`Ctrl + R`)
+- Garder les options par défaut et confirmer  
+→ une nouvelle tier `lex` est créée, contenant les noyaux des groupes clitiques (places où peut tomber l'accent) indiquées par `*`.
+
+<br>
+
+- *Praat > Open Praat script...* > choisir `2-makeAP.praat` (*AP* = groupe clitique)
+- Exécuter le script (`Ctrl + R`)
+- Remplir comme suit :
+	- *ap tiername* : `GC`
+	- *ss tiername* : `ortho`
+- Confirmer  
+→ une nouvelle tier `lex` est créée, délimitant les groupes clitiques
+
