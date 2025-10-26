@@ -80,24 +80,49 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 - la TextGrid créée à l'aide de MAUS, contenant une tier pour les **syllabes**.
 - le programme **Analor** :
 	- Si ce n'est pas déjà fait, installer l'[environnement Java](https://adoptium.net/fr/temurin/releases?version=21&os=any&arch=any) 
-	- Télécharger [Analor](https://www.lattice.cnrs.fr/ressources/logiciels/analor/) au format `.jar`
-	- Ouvrir `Analor 0.0.jar` avec Java/JRE.
+	- Télécharger l'exécutable d'[Analor](https://www.lattice.cnrs.fr/ressources/logiciels/analor/)
+	- Ouvrir `Analor 0.0.jar` avec Java/JRE/JDK.
 
 ---
 
+1) **Préparer la TextGrid**
+
+Dans Praat :
 - Dupliquer la tier `syll` (*Tier > Duplicate Tier...*) en l'appelant `prom`
 - Nettoyer la tier `prom` nouvellement créée (*Tier > Remove all text from tier*)
 - Dans la tier `prom`, noter **les pauses** par **_**
 
-<br>
+---
 
-1) D'abord, analyse **perceptive des proéminences**
+2) **Analyse perceptive des proéminences**
 
+Dans Praat : 
 - Masquer les analyses visuelles (*Analyses > Show analyses* > tout décocher)
 - Sélectionner un intervalle de 3-4 secondes et tenter de percevoir à l'oreille les proéminences (généralement signalées par des allongements et des variations de pitch)
 - Noter les **proéminences principales** par **`P`**, les **proéminences secondaires** par **`p`**, les **disfluences** (hésitations, bégayements, interruptions, etc.) par **`H`**, sans oublier d'indiquer les **pauses** par un **`_`**.
 
-2) **Analyse automatique avec Analor**
+---
 
+3) **Export**
 
+Dans Praat Objects :
+
+- Sélectionner **le son**
+	- *To Intensity...*
+		- (Laisser les paramètres par défaut et cliquer OK)
+		- *Down to IntensityTier*
+- Resélectionner le son
+	- *Analyse periodicity > To Pitch (filtered autocorrelation*
+		- (Laisser les paramètres par défaut et cliquer OK)
+		- *Convert > Down to PitchTier*
+
+Il y a maintenant 6 objets, dont on peut supprimer *Intensity* et *Pitch*, en gardant ***Sound***, ***TextGrid***, ***IntensityTier*** et ***PitchTier***.
+
+**Sélectionner ces 4 fichiers** et les **exporter au format binaire** (*Save > Save as binary file...*)
+
+---
+
+4) **Analyse automatique avec Analor**
+
+- Ouvrir `Analor 0.0.jar` avec Java/JRE/JDK
 - 
