@@ -66,5 +66,8 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 		1. *groupes prosodiques*: position de la tier `ortho` (en l'occurrence *2*)
 		2. *syllabes*: position de la tier `syll` (en l'occurrence *4*)
 
+
+**Résultat** : trois fichiers .txt
+
 ## 4) En cours de rédaction
-25 octobre
+26 octobre
