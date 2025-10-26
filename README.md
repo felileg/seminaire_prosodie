@@ -22,10 +22,9 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 **But** : transcrire en phonétique, découper finement en syllabes et en phonèmes.
 
-**Prérequis** : le fichier qu'on vient de créer, soit une TextGrid avec une tier `ortho` contenant une transcription orthographique des unités de parole.
+**Prérequis** : la TextGrid qu'on vient de créer, avec une tier `ortho` contenant une transcription orthographique des unités de parole.
 
 ---
-<br>
 
 - Aller sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSGeneral)
 - Menu à gauche (*show service sidebar*) > *Pipeline **without** ASR*
@@ -47,7 +46,7 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 **Résultat**: une TextGrid avec 4 niveaux d'analyse: groupe prosodique, mot, syllabe et phonème.
 
-<br>
+---
 
 *Note: MAUS permet de faire en une seule étape la transcription et la segmentation. Pour cela, il faut sélectionner* Pipeline **with** ASR *dans le menu de gauche* (show service sidebar) *et s'identifier avec son université. Le résultat est cependant médiocre par rapport à Whisper + MAUS ou segmentation manuelle + MAUS.*
 
@@ -61,7 +60,6 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 **Prérequis** : la TextGrid créée à l'aide de MAUS, contenant une tier pour les **groupes prosodiques** (unités de paroles séparées par des pauses) et une autre pour les **syllabes**.
 
 ---
-<br>
 
 - Contrôler que le son et la TextGrid ont le même nom (à part l'extension)
 - Ouvrir Praat
@@ -86,7 +84,6 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 	- Ouvrir `Analor 0.0.jar` avec Java/JRE.
 
 ---
-<br>
 
 - Dupliquer la tier `syll` (*Tier > Duplicate Tier...*) en l'appelant `prom`
 - Nettoyer la tier `prom` nouvellement créée (*Tier > Remove all text from tier*)
