@@ -11,7 +11,7 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 - Si ce n'est pas déjà fait, **[installer Python](https://www.python.org/downloads/)** avec son IDLE
 - **Installer les dépendances** : dans un terminal, exécuter `pip install openai-whisper praatio`
-	- Les utilisateurices de Windows doivent aussi exécuter `winget install ffmpeg`
+	- Les utilisateur·ices de Windows doivent aussi exécuter `winget install ffmpeg`
 - Télécharger le script **[whisper-textgrid.py](whisper-textgrid/whisper-textgrid-universal.py)** et le mettre dans le même dossier que le fichier audio
 - Ouvrir le script (par défaut avec *python IDLE*) et **l'exécuter** (*Run > Run Module*)
 - Renseigner le fichier audio et la langue de transcription et **patienter**  
@@ -32,7 +32,7 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 - Déplier *Expert Options*
 - *Input tier name* : `ortho`
 - *Output Encoding* : `IPA`
-- *Run web service*
+- Accepter les conditions et *Run web service*
 - Télécharger la TextGrid
 - L'ouvrir dans Praat et contrôler la segmentation.
 - Renommer les tiers :
@@ -51,15 +51,15 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 *Note 2: Praat permet aussi de segmenter automatiquement à partir d'une transcription orthographique (sélectionner l'intervalle puis `Ctrl + D`). Le résultat est cependant médiocre par rapport à MAUS.*
 
 
-## 3) Calculer les variables temporelles
+## 3) Calcul des variables temporelles (facultatif pour l'exercice du 19 octobre)
 
 **But** : analyse chiffrée du débit de parole (rapport phonèmes/groupes prosodiques)
 
-**Prérequis** : le fichier qu'on vient de créer avec MAUS, soit une TextGrid avec une tier pour les **groupes prosodiques** (unités de paroles séparées par des pauses) et une autre pour les **syllabes**.
+**Prérequis** : la TextGrid créée à l'aide de MAUS, contenant une tier pour les **groupes prosodiques** (unités de paroles séparées par des pauses) et une autre pour les **syllabes**.
 
 - Contrôler que le son et la TextGrid ont le même nom (à part l'extension)
 - Ouvrir Praat
-- *Praat* > *Open Praat script...* > sélectionner le script **variables temporelles** ([MacOS/Linux](variables_temporelles_MAC_LINUX.praat), [Windows](variables_temporelles_WIN.praat))
+- *Praat* > *Open Praat script...* > sélectionner le script **variables temporelles** ([MacOS/Linux](praat_scripts/variables_temporelles_MAC_LINUX.praat), [Windows](praat_scripts/variables_temporelles_WIN.praat))
 - *Run* > *Run* ou `Ctrl + R`
 - Remplir : 
 	- Dossier : adresse du **répertoire** dans lequel se trouve la TextGrid (pas l'adresse du fichier)
@@ -70,5 +70,31 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 **Résultat** : trois fichiers .txt
 
-## 4) En cours de rédaction
-26 octobre
+## 4) Annotation des proéminences
+
+**Prérequis** : 
+- la TextGrid créée à l'aide de MAUS, contenant une tier pour les **syllabes**.
+- le programme **Analor** :
+	- Si ce n'est pas déjà fait, installer l'[environnement Java](https://adoptium.net/fr/temurin/releases?version=21&os=any&arch=any) 
+	- Télécharger [Analor](https://www.lattice.cnrs.fr/ressources/logiciels/analor/) au format `.jar`
+	- Ouvrir `Analor 0.0.jar` avec Java/JRE.
+
+---
+<br>
+
+- Dupliquer la tier `syll` (*Tier > Duplicate Tier...*) en l'appelant `prom`
+- Nettoyer la tier `prom` nouvellement créée (*Tier > Remove all text from tier*)
+- Dans la tier `prom`, noter **les pauses** par **_**
+
+<br>
+
+1) D'abord, analyse **perceptive des proéminences**
+
+- Masquer les analyses visuelles (*Analyses > Show analyses* > tout décocher)
+- Sélectionner un intervalle de 3-4 secondes et tenter de percevoir à l'oreille les proéminences (généralement signalées par des allongements et des variations de pitch)
+- Noter les **proéminences principales** par **`P`**, les **proéminences secondaires** par **`p`**, les **disfluences** (hésitations, bégayements, interruptions, etc.) par **`H`**, sans oublier d'indiquer les **pauses** par un **`_`**.
+
+2) **Analyse automatique avec Analor**
+
+
+- 
