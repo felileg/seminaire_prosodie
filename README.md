@@ -26,7 +26,7 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 ---
 
-- Aller sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSGeneral)
+Sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSGeneral) :
 - Menu à gauche (*show service sidebar*) > *Pipeline **without** ASR*
 - Sélectionner **le fichier audio et la TextGrid du même nom**
 - *Upload*
@@ -48,9 +48,9 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 ---
 
-*Note: MAUS permet de faire en une seule étape la transcription et la segmentation. Pour cela, il faut sélectionner* Pipeline **with** ASR *dans le menu de gauche* (show service sidebar) *et s'identifier avec son université. Le résultat est cependant médiocre par rapport à Whisper + MAUS ou segmentation manuelle + MAUS.*
+*Note 1 : MAUS permet de faire en une seule étape la transcription et la segmentation. Pour cela, il faut sélectionner* Pipeline **with** ASR. *Le résultat est cependant médiocre par rapport à Whisper + MAUS ou segmentation manuelle + MAUS.*
 
-*Note 2: Praat permet aussi de segmenter automatiquement à partir d'une transcription orthographique (sélectionner l'intervalle puis `Ctrl + D`). Le résultat est cependant médiocre par rapport à MAUS.*
+*Note 2 : Praat permet aussi de segmenter automatiquement à partir d'une transcription orthographique (sélectionner l'intervalle puis `Ctrl + D`). Le résultat est cependant médiocre par rapport à MAUS.*
 
 
 ## 3) Calcul des variables temporelles (facultatif pour l'exercice du 19 octobre)
@@ -100,6 +100,7 @@ Dans Praat :
 - Masquer les analyses visuelles (*Analyses > Show analyses* > tout décocher)
 - Sélectionner un intervalle de 3-4 secondes et tenter de percevoir à l'oreille les proéminences (généralement signalées par des allongements et des variations de pitch)
 - Noter les **proéminences principales** par **`P`**, les **proéminences secondaires** par **`p`**, les **disfluences** (hésitations, bégayements, interruptions, etc.) par **`H`**, sans oublier d'indiquer les **pauses** par un **`_`**.
+- Enregistrer la TextGrid
 
 ---
 
@@ -124,5 +125,33 @@ Il y a maintenant 6 objets, dont on peut supprimer *Intensity* et *Pitch*, en ga
 
 4) **Analyse automatique avec Analor**
 
+**But** : détection des proéminences acoustiques effectives selon des critères empiriques (les analyses sonores qu'on a exportées depuis Praat).
+
 - Ouvrir `Analor 0.0.jar` avec Java/JRE/JDK
-- 
+- *Documents > Importer un document Praat...*
+- Sélectionner le fichier `.collection` 
+- *Paramétrage > Gestion des paramètres* > onglet *Proéminences*
+- Remplir comme suit :
+	- *Nom de la tire indiquant les phonèmes* : `phones`
+	- *Nom de la tire indiquant les syllabes* : `syll`
+	- *Nom de la tire indiquant les disfluences* : `prom`
+	- *Marques de proéminence* : `p;P`
+	- Laisser par défaut les autres paramètres (marques de pause, tire des proéminences de référence)
+	- Valider
+- *Proéminences > Détecter les proéminences*  
+→ une tier `prom-analor` est créée
+- *Documents > Exporter un document Praat*
+- Exporter le documment `.collection`
+- Rouvrir dans Praat, contrôler le résultat et enregistrer la TextGrid
+
+---
+
+5) **Analyse syntaxique avec Dismo**
+
+**But** : analyse syntaxique de la tier `words`, pour détecter les **groupes clitiques**. Les groupes clitiques sont une **notion syntaxique théorique, et pas directement prosodique** : ils représentent l'unité sur laquelle **peut** tomber l'acccent.
+
+Dans DisMo: 
+- *File > Add file to the corpus* : choisir la TextGrid comportant la tier `prom-analor` 
+- Cocher toutes les cases dans *Annotation options*
+- *→ Annotate!*  
+→ une nouvelle TextGrid (*_dismo.TextGrid) est créée
