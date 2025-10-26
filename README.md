@@ -148,7 +148,7 @@ Il y a maintenant 6 objets, dont on peut supprimer *Intensity* et *Pitch*, en ga
 
 5) **Analyse syntaxique avec Dismo**
 
-**Ce que ça fait** : analyse syntaxique de la tier `words`, pour pouvoir plus tard détecter les **groupes clitiques**. Les groupes clitiques sont une **notion syntaxique théorique, et pas directement prosodique** : ils représentent l'unité sur laquelle **peut** tomber l'acccent.
+**But** : analyse syntaxique automatique de la tier `words`, pour pouvoir plus tard détecter les **groupes clitiques**. Les groupes clitiques sont une **notion syntaxique théorique, et pas directement prosodique** : ils représentent l'unité sur laquelle **peut** tomber l'acccent.
 
 Dans DisMo : 
 - *File > Add file to the corpus* : choisir la TextGrid comportant la tier `prom-analor` 
@@ -156,10 +156,11 @@ Dans DisMo :
 - *→ Annotate!*  
 → une nouvelle TextGrid est créée, contenant les annotations syntaxiques
 
+---
 
 6) **Mise en évidence des groupes clitiques** avec des scripts Praat
 
-**Ce que ça fait** : utilise les étiquettes syntaxiques générées par DisMo pour détecter les noyaux des groupes clitiques.
+**But** : utilise les étiquettes syntaxiques générées par DisMo pour détecter les noyaux des groupes clitiques.
 
 Dans Praat:
 - Importer la TextGrid générée par DisMo
