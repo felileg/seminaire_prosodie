@@ -12,7 +12,7 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 - Si ce n'est pas déjà fait, **[installer Python](https://www.python.org/downloads/)** avec son IDLE
 - **Installer les dépendances** : dans un terminal, exécuter `pip install openai-whisper praatio`
 	- Les utilisateurices de Windows doivent aussi exécuter `winget install ffmpeg`
-- Télécharger le script **[whisper-textgrid.py](whisper-textgrid.py)** et le mettre dans le même dossier que le fichier audio
+- Télécharger le script **[whisper-textgrid.py](whisper-textgrid/whisper-textgrid-universal.py)** et le mettre dans le même dossier que le fichier audio
 - Ouvrir le script (par défaut avec *python IDLE*) et **l'exécuter** (*Run > Run Module*)
 - Renseigner le fichier audio et la langue de transcription et **patienter**  
 → une TextGrid est créée dans le dossier!
