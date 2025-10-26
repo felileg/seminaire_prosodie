@@ -113,7 +113,7 @@ Dans Praat Objects :
 		- (Laisser les paramètres par défaut et cliquer OK)
 		- *Down to IntensityTier*
 - Resélectionner le son
-	- *Analyse periodicity > To Pitch (filtered autocorrelation*
+	- *Analyse periodicity > To Pitch (filtered autocorrelation)*
 		- (Laisser les paramètres par défaut et cliquer OK)
 		- *Convert > Down to PitchTier*
 
@@ -157,7 +157,7 @@ Dans DisMo :
 → une nouvelle TextGrid est créée, contenant les annotations syntaxiques
 
 
-6) **Mise en évidence des groupes clitiques**
+6) **Mise en évidence des groupes clitiques** avec des scripts Praat
 
 **Ce que ça fait** : utilise les étiquettes syntaxiques générées par DisMo pour détecter les noyaux des groupes clitiques.
 
@@ -174,7 +174,7 @@ Dans Praat:
 
 <br>
 
-- *Praat > Open Praat script...* > choisir `2-makeAP.praat` (*AP* = groupe clitique)
+- *Praat > Open Praat script...* > choisir `2-makeAP.praat`
 - Exécuter le script (`Ctrl + R`)
 - Remplir comme suit :
 	- *ap tiername* : `GC`
