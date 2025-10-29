@@ -134,6 +134,7 @@ Il y a maintenant 6 objets, dont on peut supprimer *Intensity* et *Pitch*, en ga
 - *Paramétrage > Gestion des paramètres* > onglet *Proéminences*
 - Remplir comme suit :
 	- *Nom de la tire indiquant les phonèmes* : `phones`
+	- *Marques de voyelles* : `a;ɑ;e;ɛ;ə;i;o;ɔ;œ;ø;u;y;ɑ̃;ɛ̃;ɔ̃;œ̃`
 	- *Nom de la tire indiquant les syllabes* : `syll`
 	- *Nom de la tire indiquant les disfluences* : `prom`
 	- *Marques de proéminence* : `p;P`
