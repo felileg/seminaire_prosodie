@@ -8,16 +8,8 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 ### Façon technique (Whisper)
 À terme, fait gagner du temps, mais demande une certaine mise en place :
-- Linux: télécharger l'[exécutable](https://github.com/felileg/seminaire_prosodie/releases/download/Linux/whisper-textgrid-linux.zip), le mettre dans le même dossier que le fichier audio et le lancer.
-- Windows et Mac OS:
-	- [Installer Python](https://www.python.org/downloads/) avec son IDLE
-	- Installer les dépendances : dans un terminal, exécuter `pip install openai-whisper praatio`
-		- Dépendance supplémentaire pour Windows:  `winget install ffmpeg`
-	- Télécharger le script [whisper-textgrid.py](whisper-textgrid/whisper-textgrid-universal.py) et le mettre dans le même dossier que le fichier audio
-	- Ouvrir le script (par défaut avec *python IDLE*) et l'exécuter (*Run > Run Module*)
-- Renseigner le fichier audio et la langue de transcription et **patienter**  
-→ une TextGrid est créée dans le dossier!
-- Ouvrir dans Praat et contrôler la segmentation et la transcription.
+
+À METTRE À JOUR
 
 ## 2) Segmentation
 
@@ -28,10 +20,12 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 ---
 
 Sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSGeneral) :
+
 - Menu à gauche (*show service sidebar*) > *Pipeline **without** ASR*
 - Sélectionner **le fichier audio et la TextGrid du même nom**
 - *Upload*
 - Pipeline : `CHUNKPREP → G2P → MAUS → PHO2SYL`
+	- Si vous obtenez une erreur (TextGrid illisible ou remplie de `<notProcessedChunk>`) essayez `G2P → MAUS → PHON2SYL`. C'est moins précis, puisque cela ignore la segmentation existante, mais encore satisfaisant. Je ne sais pas encore d'où vient l'erreur 🫠
 - Déplier *Expert Options*
 - *Input tier name* : `ortho`
 - *Output Encoding* : `IPA`
@@ -56,7 +50,7 @@ Sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/W
 
 ## 3) Calcul des variables temporelles (facultatif pour l'exercice du 19 octobre)
 
-**But** : analyse chiffrée du débit de parole (rapport phonèmes/groupes prosodiques)
+**But** : analyse chiffrée du débit de parole (rapport syllabes/groupes prosodiques)
 
 **Prérequis** : la TextGrid créée à l'aide de MAUS, contenant une tier pour les **groupes prosodiques** (unités de paroles séparées par des pauses) et une autre pour les **syllabes**.
 
@@ -97,7 +91,8 @@ Dans Praat :
 
 2) **Analyse perceptive des proéminences**
 
-Dans Praat : 
+Dans Praat :
+
 - Masquer les analyses visuelles (*Analyses > Show analyses* > tout décocher)
 - Sélectionner un intervalle de 3-4 secondes et tenter de percevoir à l'oreille les proéminences (généralement signalées par des allongements et des variations de pitch)
 - Noter les **proéminences principales** par **`P`**, les **proéminences secondaires** par **`p`**, les **disfluences** (hésitations, bégayements, interruptions, etc.) par **`H`**, sans oublier d'indiquer les **pauses** par un **`_`**.
