@@ -25,13 +25,15 @@ Sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/W
 - Sélectionner **le fichier audio et la TextGrid du même nom**
 - *Upload*
 - Pipeline : `CHUNKPREP → G2P → MAUS → PHO2SYL`
-	- Si vous obtenez une erreur (TextGrid illisible ou remplie de `<notProcessedChunk>`) essayez `G2P → MAUS → PHON2SYL`. C'est moins précis, puisque cela ignore la segmentation existante, mais encore satisfaisant. Je dois encore investiguer d'où vient l'erreur 🫠
 - Déplier *Expert Options*
 - *Input tier name* : `ortho`
 - *Output Encoding* : `IPA`
 - Accepter les conditions et *Run web service*
 - Télécharger la TextGrid
 - L'ouvrir dans Praat et contrôler la segmentation.
+
+> *Si vous obtenez une erreur (TextGrid invalide ou remplie de `<notProcessedChunk>`) c'est peut-être parce que MAUS exige que l'échantillon sonore finisse par un silence (allez savoir pourquoi). Vous pouvez simplement rajouter 1s de silence à la fin de l'audio et réutiliser la même TextGrid.*
+
 - Renommer les tiers :
 	- `ORT-MAU` (mots isolés) → `words`
 	- `KAN-MAU` et `KAS-MAU` → supprimer
