@@ -9,7 +9,7 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 ### Façon technique (Whisper)
 À terme, fait gagner du temps, mais demande une certaine mise en place pour Windows ou Mac :
 
-- [Linux](https://github.com/felileg/seminaire_prosodie/blob/main/whisper-textgrid/Whisper-to-TextGrid-standalone) (exécutable portable)
+- [Linux](https://github.com/felileg/seminaire_prosodie/raw/refs/heads/main/whisper-textgrid/Whisper-to-TextGrid-standalone)
 - [MacOS/Windows](https://www.researchgate.net/publication/381010298_Whisper_in_Praat_v0931_Windows_macOS) (script Praat + dépendance à installer)
 
 ## 2) Segmentation
@@ -56,7 +56,7 @@ Sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/W
 
 **But** : analyse chiffrée du débit de parole (rapport syllabes/groupes prosodiques)
 
-**Prérequis** : la TextGrid créée à l'aide de MAUS, contenant une tier pour les **syllabes**, manuellement contrôlée pour bien indiquer les **pauses** avec `<p:>` ou `_` et les disfluences avec `<dis>`. 
+**Prérequis** : la TextGrid créée à l'aide de MAUS, contenant une tier pour les **syllabes**, manuellement contrôlée pour bien indiquer les **pauses** avec `<p:>` ou `_` et les **disfluences** avec `<dis>`. 
 
 ---
 
