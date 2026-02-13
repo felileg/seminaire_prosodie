@@ -56,13 +56,16 @@ Sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/W
 
 **But** : analyse chiffrée du débit de parole (rapport syllabes/groupes prosodiques)
 
-**Prérequis** : la TextGrid créée à l'aide de MAUS, contenant une tier pour les **syllabes**, manuellement contrôlée pour bien indiquer les **pauses** avec `<p:>` ou `_` et les **disfluences** avec `<dis>`. 
+**Prérequis** : 
+
+- La TextGrid créée à l'aide de MAUS, contenant une tier pour les **syllabes**, manuellement contrôlée pour bien indiquer les **pauses** avec `<p:>` ou `_` et les **disfluences** avec `<dis>`. 
+- Le script [`VitArt.praat`](https://raw.githubusercontent.com/felileg/seminaire_prosodie/main/praat_scripts/VitArt.praat)
 
 ---
 
 - Contrôler que le son et la TextGrid ont le même nom (à part l'extension)
 - Ouvrir Praat
-- *Praat* > *Open Praat script...* > sélectionner le script **VitArt.praat**
+- *Praat* > *Open Praat script...* > sélectionner le script *VitArt.praat*
 - *Run* > *Run* ou `Ctrl + R`
 - Remplir : 
 	- Dossier : adresse du **répertoire** dans lequel se trouve la TextGrid (pas l'adresse du fichier)
