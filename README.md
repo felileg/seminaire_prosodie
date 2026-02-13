@@ -9,7 +9,8 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 ### Façon technique (Whisper)
 À terme, fait gagner du temps, mais demande une certaine mise en place :
 
-À METTRE À JOUR
+- [Linux](https://github.com/felileg/seminaire_prosodie/blob/main/whisper-textgrid/Whisper-to-TextGrid-standalone) (exécutable portable)
+- [MacOS/Windows](https://www.researchgate.net/publication/381010298_Whisper_in_Praat_v0931_Windows_macOS) (script Praat + dépendance à installer)
 
 ## 2) Segmentation
 
@@ -51,26 +52,21 @@ Sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/W
 *Note 2 : Praat permet aussi de segmenter automatiquement à partir d'une transcription orthographique (sélectionner l'intervalle puis `Ctrl + D`). Le résultat est cependant médiocre par rapport à MAUS.*
 
 
-## 3) Calcul des variables temporelles (facultatif pour l'exercice du 19 octobre)
+## 3) Calcul des variables temporelles
 
 **But** : analyse chiffrée du débit de parole (rapport syllabes/groupes prosodiques)
 
-**Prérequis** : la TextGrid créée à l'aide de MAUS, contenant une tier pour les **groupes prosodiques** (unités de paroles séparées par des pauses) et une autre pour les **syllabes**.
+**Prérequis** : la TextGrid créée à l'aide de MAUS, contenant une tier pour les **syllabes**, manuellement contrôlée pour bien indiquer les **pauses** avec `<p:>` ou `_` et les disfluences avec `<dis>`. 
 
 ---
 
 - Contrôler que le son et la TextGrid ont le même nom (à part l'extension)
 - Ouvrir Praat
-- *Praat* > *Open Praat script...* > sélectionner le script **variables temporelles** ([MacOS/Linux](praat_scripts/variables_temporelles_MAC_LINUX.praat), [Windows](praat_scripts/variables_temporelles_WIN.praat))
+- *Praat* > *Open Praat script...* > sélectionner le script **VitArt.praat**
 - *Run* > *Run* ou `Ctrl + R`
 - Remplir : 
 	- Dossier : adresse du **répertoire** dans lequel se trouve la TextGrid (pas l'adresse du fichier)
-	- Numéros des tiers :
-		1. *groupes prosodiques*: position de la tier `ortho` (en l'occurrence *2*)
-		2. *syllabes*: position de la tier `syll` (en l'occurrence *4*)
-
-
-**Résultat** : trois fichiers .txt
+	- Numéro de la tier : numéro de la tier indiquant les syllabes et les pauses/disfluences.
 
 ## 4) Annotation des proéminences
 
