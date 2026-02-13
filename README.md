@@ -21,10 +21,11 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 
 Sur [WebMAUS](https://clarin.phonetik.uni-muenchen.de/BASWebServices/interface/WebMAUSGeneral) :
 
-- Menu à gauche (*show service sidebar*) > *Pipeline **without** ASR*
-- Sélectionner **le fichier audio et la TextGrid du même nom**
-- *Upload*
-- Pipeline : `CHUNKPREP → G2P → MAUS → PHO2SYL`
+- Menu à gauche (*Show service sidebar*) > *Pipeline **without** ASR*
+- Sous *Files*, sélectionner **le fichier audio et la TextGrid du même nom**
+- *⬆️ Upload*
+- *Pipeline name* : `CHUNKPREP → G2P → MAUS → PHO2SYL`
+- *Language* : la langue de l'audio
 - Déplier *Expert Options*
 - *Input tier name* : `ortho`
 - *Output Encoding* : `IPA`
