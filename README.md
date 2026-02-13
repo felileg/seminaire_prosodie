@@ -9,7 +9,7 @@ Faire à la main une transcription grossière dans une tier `ortho`.
 ### Façon technique (Whisper)
 À terme, fait gagner du temps, mais demande une certaine mise en place pour Windows ou Mac :
 
-- [Linux](https://github.com/felileg/seminaire_prosodie/raw/refs/heads/main/whisper-textgrid/Whisper-to-TextGrid-standalone)
+- [Linux](https://github.com/felileg/seminaire_prosodie/raw/refs/heads/main/whisper-textgrid/Whisper-to-TextGrid-standalone) (exécutable portatif)
 - [MacOS/Windows](https://www.researchgate.net/publication/381010298_Whisper_in_Praat_v0931_Windows_macOS) (script Praat + dépendance à installer)
 
 ## 2) Segmentation
